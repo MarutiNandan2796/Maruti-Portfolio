@@ -1,33 +1,57 @@
 # 🎨 Professional Animated Portfolio
 
-A modern, attractive portfolio website built with React and Framer Motion. Perfect for showcasing your projects to companies and clients.
+A modern, attractive portfolio website built with **React**, **Framer Motion**, **Vite**, and **Tailwind CSS**. Perfect for showcasing your projects to companies and clients with stunning animations and professional design.
+
+**Live Demo:** [Visit Portfolio](https://your-portfolio-url.com)  
+**GitHub Repo:** [MarutiNandan2796/portfolio-full-stack01](https://github.com/MarutiNandan2796/portfolio-full-stack01)
 
 ## ✨ Features
 
-- **Smooth Animations**: Beautiful transitions and animations using Framer Motion
-- **Responsive Design**: Works perfectly on desktop, tablet, and mobile devices
-- **Modern UI**: Gradient backgrounds, glassmorphism effects, and smooth interactions
-- **Professional Sections**:
-  - Hero section with eye-catching introduction
-  - About section with skills highlights
-  - Projects showcase with links to code and live demos
-  - Skills & expertise section with stats
+- **✨ Advanced Animations**: 
+  - Mesmerizing loading screen with 15+ synchronized animations
+  - Floating particles, rotating rings, and pulsing energy waves
+  - Animated circuit paths and scanning beams
+  - Enhanced footer with decorative elements
+  - Smooth component transitions and hover effects
+
+- **📱 Responsive Design**: Works perfectly on desktop, tablet, and mobile devices
+
+- **🎨 Modern UI**: 
+  - Gradient backgrounds and glassmorphism effects
+  - Cyberpunk aesthetic with neon glows
+  - Dark theme optimized for presentation
+  - Professional color palette (cyan, pink, purple)
+
+- **🌟 Professional Sections**:
+  - Landing page with eye-catching hero section
+  - About section with professional summary
+  - Projects showcase with live demos and GitHub links
+  - Skills & expertise section with technology highlights
   - Contact form with validation
-  - Footer with social links
-- **Dark Theme**: Easy on the eyes with modern color palette
-- **Optimized Performance**: Fast loading with optimized animations
+  - Animated footer with interactive elements
+  - Certifications and education sections
+
+- **⚡ Performance Optimized**: 
+  - Fast loading with Vite
+  - Optimized animations for smooth 60fps
+  - Lazy loading for images
+  - Code splitting and minification
+
+- **🌙 Dark Mode**: Beautiful dark theme perfect for tech portfolios
 
 ## 🚀 Quick Start
 
 ### Prerequisites
-- Node.js (v14 or higher)
-- npm or yarn
+- **Node.js** v14 or higher
+- **npm** or **yarn** package manager
+- Git for version control
 
 ### Installation
 
-1. Navigate to the portfolio directory:
+1. Clone the repository:
 ```bash
-cd portfolio
+git clone https://github.com/MarutiNandan2796/portfolio-full-stack01.git
+cd portfolio-full-stack01
 ```
 
 2. Install dependencies:
@@ -40,7 +64,15 @@ npm install
 npm run dev
 ```
 
-4. Open your browser and go to `http://localhost:3000`
+4. Open your browser and navigate to:
+```
+http://localhost:5173
+```
+
+5. Build for production:
+```bash
+npm run build
+```
 
 ## 📁 Project Structure
 
@@ -48,106 +80,230 @@ npm run dev
 portfolio/
 ├── src/
 │   ├── components/
-│   │   ├── Navbar.jsx          # Navigation bar with smooth scroll
-│   │   ├── Hero.jsx            # Landing section
-│   │   ├── About.jsx           # About you section
-│   │   ├── Projects.jsx        # Featured projects showcase
-│   │   ├── Skills.jsx          # Skills and expertise
-│   │   ├── Contact.jsx         # Contact form
-│   │   └── Footer.jsx          # Footer
+│   │   ├── Loader.jsx              # ⚡ Advanced loading screen with animations
+│   │   ├── Navbar.jsx              # Navigation with smooth scroll
+│   │   ├── Hero.jsx                # Landing section
+│   │   ├── About.jsx               # About section
+│   │   ├── Projects.jsx            # Projects showcase
+│   │   ├── Skills.jsx              # Skills & expertise
+│   │   ├── Education.jsx           # Education details
+│   │   ├── Certifications.jsx      # Certificates display
+│   │   ├── Contact.jsx             # Contact form
+│   │   ├── CodingPlatforms.jsx     # Coding profiles (LeetCode, etc.)
+│   │   ├── ExpertiseShowcase.jsx   # Expertise highlights
+│   │   └── Footer.jsx              # Footer with animations
+│   ├── context/
+│   │   └── DarkModeContext.jsx     # Dark mode state management
 │   ├── hooks/
-│   │   └── useInView.js        # Custom intersection observer hook
-│   ├── App.jsx                 # Main App component
-│   ├── main.jsx                # Entry point
-│   └── index.css               # Global styles
-├── index.html                  # HTML template
-├── package.json                # Dependencies
-├── vite.config.js             # Vite configuration
-├── tailwind.config.js         # Tailwind CSS configuration
-└── postcss.config.js          # PostCSS configuration
+│   │   └── useInView.js            # Intersection observer hook
+│   ├── App.jsx                     # Main App component
+│   ├── main.jsx                    # Entry point
+│   └── index.css                   # Global styles
+├── public/
+│   ├── resume.pdf                  # Your resume
+│   ├── internship-certificate.pdf  # Certificates
+│   └── mern-stack.pdf              # MERN stack certificate
+├── index.html                      # HTML template
+├── package.json                    # Dependencies
+├── vite.config.js                  # Vite configuration
+├── tailwind.config.js              # Tailwind CSS config
+├── postcss.config.js               # PostCSS config
+└── README.md                       # This file
 ```
 
 ## 🎨 Customization Guide
 
 ### 1. **Personal Information**
-Edit `src/components/Hero.jsx` to update:
-- Your name and title
-- Professional summary
-- Social media links
-- Call-to-action buttons
+Edit `src/components/Hero.jsx`:
+- Update your name and professional title
+- Change your bio and introduction
+- Add/update social media links
+- Customize call-to-action buttons
 
-### 2. **Projects**
+### 2. **Projects Showcase**
 Edit `src/components/Projects.jsx`:
-- Add/remove projects from the `projects` array
-- Update project titles, descriptions, and technologies
-- Add links to GitHub and live demos
+- Add/remove projects from the projects array
+- Update titles, descriptions, and technologies used
+- Add GitHub repository links
+- Add live demo URLs
+- Update project images
 
-### 3. **Skills**
+### 3. **Skills & Technologies**
 Edit `src/components/Skills.jsx`:
-- Update skill categories and individual skills
-- Modify stats (projects completed, years of experience, etc.)
+- Add/remove skill categories
+- Update individual technologies
+- Modify proficiency levels
+- Update statistics
 
 ### 4. **About Section**
 Edit `src/components/About.jsx`:
-- Update your bio and professional experience
-- Add achievements and highlights
-- Customize the profile image (emoji or actual image)
+- Write your professional bio
+- Add work experience details
+- Include achievements
+- Update profile picture
 
-### 5. **Contact Information**
+### 5. **Education & Certifications**
+- Edit `src/components/Education.jsx` for degrees and courses
+- Edit `src/components/Certifications.jsx` for certificates and achievements
+- Upload certificate PDFs to `public/` folder
+
+### 6. **Contact Information**
 Edit `src/components/Contact.jsx`:
-- Update phone, email, and location
-- Configure form submission (connect to your backend)
-- Add more social media links
+- Update email address
+- Add phone number
+- Update location
+- Configure form submission
 
-### 6. **Colors & Theme**
-Edit `tailwind.config.js` to customize:
+### 7. **Colors & Theme**
+Edit `tailwind.config.js` to customize colors:
 ```javascript
-colors: {
-  primary: '#6366f1',      // Main color (purple/indigo)
-  secondary: '#ec4899',    // Accent color (pink)
-  dark: '#0f172a',         // Dark background
-  darkCard: '#1e293b',     // Card background
+theme: {
+  colors: {
+    primary: '#00d9ff',    // Cyan - Main color
+    secondary: '#ec4899',  // Pink - Accent color
+    dark: '#0f172a',       // Dark background
+    darkCard: '#1e293b',   // Card background
+  }
 }
 ```
 
-## 🎬 Animation Customization
+## 🎬 Animation Features
 
-All animations use Framer Motion. Key animation files:
-- Component-level animations use `motion` components
-- Global animations defined in `src/index.css`
-- Hover effects and transitions can be modified in each component
+### Loading Screen (Loader.jsx)
+- 60+ animated particles with fade and scale effects
+- Rotating rings with 3+ synchronized orbital circles
+- Pulsing energy waves expanding from center
+- Floating symbols (✦, ◈, ✧, ●, ○, etc.)
+- Animated scanning beams and wave lines
+- Interactive code compilation display
+- Typewriter effect for status text
+- Percentage counter with glow effects
 
-Common animation properties:
-```jsx
-// Fade in animation
-initial={{ opacity: 0 }}
-animate={{ opacity: 1 }}
-transition={{ duration: 0.6 }}
+### Footer (Footer.jsx)
+- Animated gradient background
+- Floating particles with opacity effects
+- Bouncing dot patterns (8 dots with staggered animation)
+- Rotating center accents
+- Pulsing decorative lines
+- Enhanced heart animation for "Made with ❤️"
+- Interactive hover effects on text elements
 
-// Scale animation
-whileHover={{ scale: 1.05 }}
+### Component Animations
+- Smooth fade-in animations on scroll into view
+- Scale and slide effects on hover
+- Staggered animations for list items
+- Color transition effects
+- Glowing text shadows and effects
 
-// Slide animation
-initial={{ x: -50 }}
-animate={{ x: 0 }}
-```
+## 🛠️ Technologies Used
 
-## 📦 Build & Deploy
+### Frontend
+- **React 18+** - UI library
+- **Vite** - Fast build tool
+- **Framer Motion** - Advanced animations
+- **Tailwind CSS** - Utility-first CSS
+- **React Icons** - Icon library
 
-### Build for Production
+### Development
+- **Node.js** - JavaScript runtime
+- **npm** - Package manager
+- **Git** - Version control
+- **PostCSS** - CSS processing
+
+## 📦 Available Scripts
+
 ```bash
+# Development server
+npm run dev
+
+# Production build
 npm run build
+
+# Preview production build
+npm run preview
+
+# GitHub push
+git push origin main
 ```
 
-This creates an optimized production build in the `dist/` folder.
+## 🚀 Deployment Options
 
-### Deploy Options
-
-#### Vercel (Recommended)
+### Vercel (Recommended)
 ```bash
 npm install -g vercel
 vercel
 ```
+
+### Netlify
+1. Connect your GitHub repository to Netlify
+2. Set build command: `npm run build`
+3. Set publish directory: `dist`
+4. Deploy
+
+### GitHub Pages
+```bash
+npm install gh-pages --save-dev
+# Update package.json with homepage URL
+git push origin main
+```
+
+### AWS Amplify
+```bash
+npm install -g @aws-amplify/cli
+amplify init
+amplify publish
+```
+
+## 📸 Screenshots
+
+- **Loader Screen**: Stunning 15+ animation effects
+- **Hero Section**: Eye-catching introduction
+- **Projects Showcase**: Interactive project cards
+- **Skills Section**: Modern skill display with stats
+- **Footer**: Animated footer with interactive elements
+
+## 📝 Environment Variables
+
+Create a `.env.example` file for configuration:
+```env
+VITE_API_URL=your_api_url
+VITE_CONTACT_EMAIL=your_email@gmail.com
+VITE_GITHUB_URL=https://github.com/yourusername
+VITE_LINKEDIN_URL=https://linkedin.com/in/yourusername
+```
+
+## 🤝 Contributing
+
+Feel free to fork this project and customize it for your needs. Pull requests are welcome!
+
+## 📄 License
+
+This project is open source and available under the MIT License.
+
+## 👨‍💻 Author
+
+**Maruti Nandan**
+- GitHub: [@MarutiNandan2796](https://github.com/MarutiNandan2796)
+- Email: contact@yourportfolio.com
+- LinkedIn: [Your LinkedIn Profile](https://linkedin.com)
+
+## 🙏 Acknowledgments
+
+- Framer Motion for smooth animations
+- Tailwind CSS for utility-first styling
+- Vite for ultra-fast development experience
+- React team for the amazing library
+
+## 📞 Support
+
+Have questions or need help? Feel free to:
+- Open an issue on GitHub
+- Check existing documentation
+- Review component comments for implementation details
+
+---
+
+⭐ If you found this helpful, please give it a star! It helps others discover the project.
 
 #### Netlify
 1. Push to GitHub
