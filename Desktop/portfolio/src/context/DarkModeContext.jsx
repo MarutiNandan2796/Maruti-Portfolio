@@ -4,30 +4,36 @@ const DarkModeContext = createContext()
 
 export const DarkModeProvider = ({ children }) => {
   const [isDarkMode, setIsDarkMode] = useState(true)
+  const [isClient, setIsClient] = useState(false)
 
   // Check localStorage and system preference on mount
   useEffect(() => {
-    const savedMode = localStorage.getItem('darkMode')
-    if (savedMode !== null) {
-      setIsDarkMode(JSON.parse(savedMode))
-    } else {
-      // Default to dark mode
-      setIsDarkMode(true)
+    setIsClient(true)
+    if (typeof window !== 'undefined') {
+      const savedMode = localStorage.getItem('darkMode')
+      if (savedMode !== null) {
+        setIsDarkMode(JSON.parse(savedMode))
+      } else {
+        // Default to dark mode
+        setIsDarkMode(true)
+      }
     }
   }, [])
 
   // Save to localStorage and update document
   useEffect(() => {
-    localStorage.setItem('darkMode', JSON.stringify(isDarkMode))
-    
-    if (isDarkMode) {
-      document.documentElement.classList.remove('light')
-      document.documentElement.classList.add('dark')
-    } else {
-      document.documentElement.classList.remove('dark')
-      document.documentElement.classList.add('light')
+    if (typeof window !== 'undefined' && isClient) {
+      localStorage.setItem('darkMode', JSON.stringify(isDarkMode))
+      
+      if (isDarkMode) {
+        document.documentElement.classList.remove('light')
+        document.documentElement.classList.add('dark')
+      } else {
+        document.documentElement.classList.remove('dark')
+        document.documentElement.classList.add('light')
+      }
     }
-  }, [isDarkMode])
+  }, [isDarkMode, isClient])
 
   const toggleDarkMode = () => {
     setIsDarkMode(!isDarkMode)

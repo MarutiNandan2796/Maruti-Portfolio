@@ -21,18 +21,20 @@ const AboutProfileImage = () => {
     if (files[0]) {
       const reader = new FileReader()
       reader.onload = (event) => {
-        localStorage.setItem('profileImage', event.target.result)
-        window.location.reload()
+        if (typeof window !== 'undefined') {
+          localStorage.setItem('profileImage', event.target.result)
+          window.location.reload()
+        }
       }
       reader.readAsDataURL(files[0])
     }
   }
 
   const getImage = () => {
-    if (localStorage.getItem('profileImage')) {
+    if (typeof window !== 'undefined' && localStorage.getItem('profileImage')) {
       return localStorage.getItem('profileImage')
     }
-    return null
+    return '/profile.png'
   }
 
   const image = getImage()
