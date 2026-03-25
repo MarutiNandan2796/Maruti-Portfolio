@@ -170,18 +170,6 @@ const Experience = () => {
           })}
         </motion.div>
 
-        {/* Edit Instructions */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="mt-12 p-6 bg-primary/10 border border-primary/30 rounded-lg text-center"
-        >
-          <p className="text-gray-700 dark:text-gray-300 text-sm md:text-base">
-            💡 Update your experience details in the <span className="text-primary font-semibold">Experience.jsx</span> component
-          </p>
-        </motion.div>
-
         {/* Certificate Modal */}
         <AnimatePresence>
           {showCertificate && (
