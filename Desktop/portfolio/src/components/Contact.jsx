@@ -163,8 +163,6 @@ const Contact = () => {
                 {[
                   { name: 'GitHub', url: 'https://github.com/MarutiNandan2796' },
                   { name: 'LinkedIn', url: 'https://www.linkedin.com/in/maruti-nandan-4t/' },
-                  { name: 'Twitter', url: 'https://x.com/MNandan84453' },
-                  { name: 'Instagram', url: 'https://www.instagram.com/arnav_singh_1415/' },
                 ].map((social, index) => (
                   <motion.a
                     key={index}
