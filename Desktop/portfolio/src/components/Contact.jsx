@@ -62,16 +62,19 @@ const Contact = () => {
       icon: FaPhone,
       label: 'Phone',
       value: '+91 8858171312',
+      link: 'tel:+918858171312',
     },
     {
       icon: FaEnvelope,
       label: 'Email',
       value: 'marutinandan885817@gmail.com',
+      link: 'mailto:marutinandan885817@gmail.com',
     },
     {
       icon: FaMapMarkerAlt,
       label: 'Location',
       value: 'Phagwara, Punjab',
+      link: null,
     },
   ]
 
@@ -132,8 +135,13 @@ const Contact = () => {
               <motion.div
                 key={index}
                 variants={itemVariants}
-                className="flex gap-4 items-start"
+                className={`flex gap-4 items-start ${info.link ? 'cursor-pointer' : ''}`}
                 whileHover={{ x: 10 }}
+                onClick={() => {
+                  if (info.link) {
+                    window.location.href = info.link
+                  }
+                }}
               >
                 <motion.div
                   className="mt-1 p-3 bg-primary/20 rounded-lg text-primary text-lg"
@@ -143,7 +151,7 @@ const Contact = () => {
                 </motion.div>
                 <div>
                   <h3 className="text-gray-900 dark:text-gray-200 font-semibold text-lg">{info.label}</h3>
-                  <p className="text-gray-600 dark:text-gray-400">{info.value}</p>
+                  <p className={`text-gray-600 dark:text-gray-400 ${info.link ? 'hover:text-primary transition' : ''}`}>{info.value}</p>
                 </div>
               </motion.div>
             ))}
@@ -151,16 +159,23 @@ const Contact = () => {
             {/* Social Links */}
             <motion.div className="pt-4 border-t border-primary/30">
               <p className="text-gray-600 dark:text-gray-400 mb-4">Follow me on social media:</p>
-              <div className="flex gap-4">
-                {['GitHub', 'LinkedIn', 'Twitter', 'Instagram'].map((social, index) => (
+              <div className="flex gap-4 flex-wrap">
+                {[
+                  { name: 'GitHub', url: 'https://github.com/MarutiNandan2796' },
+                  { name: 'LinkedIn', url: 'https://www.linkedin.com/in/maruti-nandan-4t/' },
+                  { name: 'Twitter', url: 'https://x.com/MNandan84453' },
+                  { name: 'Instagram', url: 'https://www.instagram.com/arnav_singh_1415/' },
+                ].map((social, index) => (
                   <motion.a
                     key={index}
-                    href="#"
-                    className="px-4 py-2 bg-primary/10 hover:bg-primary/20 border border-primary/30 rounded-lg text-primary smooth-transition"
+                    href={social.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-4 py-2 bg-primary/10 hover:bg-primary/20 border border-primary/30 rounded-lg text-primary smooth-transition cursor-pointer"
                     whileHover={{ scale: 1.1, y: -3 }}
                     whileTap={{ scale: 0.95 }}
                   >
-                    {social}
+                    {social.name}
                   </motion.a>
                 ))}
               </div>
