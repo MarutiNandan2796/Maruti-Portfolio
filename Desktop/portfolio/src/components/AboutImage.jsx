@@ -16,7 +16,7 @@ const AboutImage = () => {
       setImageExists(false)
       setIsLoading(false)
     }
-    img.src = '/images/about.jpg'
+    img.src = '/profile.png'
   }, [])
 
   return (
@@ -47,7 +47,7 @@ const AboutImage = () => {
           {!isLoading && imageExists ? (
             // Actual Image
             <motion.img
-              src="/images/about.jpg"
+              src="/profile.png"
               alt="About Me"
               className="w-full h-full object-cover"
               initial={{ opacity: 0 }}
