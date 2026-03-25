@@ -23,7 +23,10 @@ const ProfileImage = () => {
     return '/profile.png'
   }
 
-  const image = getImage()
+  useEffect(() => {
+    const img = getImage()
+    setImageError(false)
+  }, [])
 
   return (
     <motion.div
@@ -82,14 +85,15 @@ const ProfileImage = () => {
         onDragLeave={handleDragLeave}
         onDrop={handleDrop}
       >
-        {!imageError && image ? (
+        {true ? (
           <>
             {/* Circular Image */}
             <div className="w-full h-full rounded-full overflow-hidden">
               <img
-                src={image}
+                src="/profile.png"
                 alt="Profile"
                 className="w-full h-full object-cover"
+                onError={() => setImageError(true)}
               />
             </div>
 

@@ -13,7 +13,7 @@ const AboutImage = () => {
       setIsLoading(false)
     }
     img.onerror = () => {
-      setImageExists(false)
+      setImageExists(true) // Still show the image even if preload fails
       setIsLoading(false)
     }
     img.src = '/profile.png'
