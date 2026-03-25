@@ -530,7 +530,8 @@ Free to use, modify, and distribute! ✨
 - 🔗 GitHub: [@MarutiNandan2796](https://github.com/MarutiNandan2796)
 - 📧 Email: [maruti.nandan@example.com](mailto:maruti.nandan@example.com)
 - 💼 LinkedIn: [Maruti Nandan](https://linkedin.com/in/maruti-nandan)
-- 🐦 Twitter: [@MarutiNandan](https://twitter.com/MarutiNandan)
+- 🐦 Twitter: [@MNandan84453](https://x.com/MNandan84453)
+- 📸 Instagram: [@arnav_singh_1415](https://www.instagram.com/arnav_singh_1415/)
 
 ---
 
@@ -606,8 +607,9 @@ If you found this project helpful, please:
 ### Made with ❤️ by Maruti Nandan
 
 [![GitHub](https://img.shields.io/github/followers/MarutiNandan2796?style=social)](https://github.com/MarutiNandan2796)
-[![Twitter](https://img.shields.io/twitter/follow/MarutiNandan?style=social)](https://twitter.com/MarutiNandan)
+[![Twitter](https://img.shields.io/twitter/follow/MNandan84453?style=social)](https://x.com/MNandan84453)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=social&logo=linkedin)](https://linkedin.com/in/maruti-nandan)
+[![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=social&logo=instagram)](https://www.instagram.com/arnav_singh_1415/)
 
 **Happy Coding! 🚀**
 

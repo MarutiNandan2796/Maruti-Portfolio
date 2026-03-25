@@ -1,6 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope } from 'react-icons/fa'
+import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope, FaInstagram } from 'react-icons/fa'
 import { HiArrowNarrowRight } from 'react-icons/hi'
 import { MdVerified } from 'react-icons/md'
 import { MdDownload } from 'react-icons/md'
@@ -50,6 +50,8 @@ const Hero = () => {
   const socials = [
     { icon: FaGithub, link: 'https://github.com/MarutiNandan2796', label: 'GitHub' },
     { icon: FaLinkedin, link: 'https://www.linkedin.com/in/maruti-nandan-4t/', label: 'LinkedIn' },
+    { icon: FaTwitter, link: 'https://x.com/MNandan84453', label: 'Twitter' },
+    { icon: FaInstagram, link: 'https://www.instagram.com/arnav_singh_1415/', label: 'Instagram' },
     { icon: FaEnvelope, link: 'mailto:marutinandan885817@gmail.com', label: 'Email' },
   ]
 
