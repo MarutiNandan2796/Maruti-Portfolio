@@ -5,6 +5,7 @@ import Hero from './components/Hero'
 import ExpertiseShowcase from './components/ExpertiseShowcase'
 import About from './components/About'
 import Experience from './components/Experience'
+import Education from './components/Education'
 import Projects from './components/Projects'
 import Skills from './components/Skills'
 import Certifications from './components/Certifications'
@@ -32,6 +33,7 @@ function AppContent() {
       <ExpertiseShowcase />
       <About />
       <Experience />
+      <Education />
       <Projects />
       <Skills />
       <Certifications />

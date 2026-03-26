@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope, FaInstagram } from 'react-icons/fa'
 import { HiArrowNarrowRight } from 'react-icons/hi'
 import { MdVerified } from 'react-icons/md'
-import { MdDownload } from 'react-icons/md'
+import { MdDownload, MdReadMore } from 'react-icons/md'
 import { scroller } from 'react-scroll'
 import ProfileImage from './ProfileImage'
 import AnimatedText from './AnimatedText'
@@ -158,7 +158,7 @@ const Hero = () => {
             {/* CTA Buttons */}
             <motion.div 
               variants={itemVariants}
-              className="flex flex-col sm:flex-row gap-3 mb-8 items-start"
+              className="flex flex-col sm:flex-row gap-3 mb-8 items-start flex-wrap"
             >
               <motion.button
                 onClick={() => {
@@ -180,6 +180,18 @@ const Hero = () => {
 
               <motion.button
                 onClick={() => {
+                  window.open('/resume.pdf', '_blank')
+                }}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="px-8 py-3 border-2 border-secondary text-secondary rounded-lg font-semibold hover:bg-secondary/10 transition flex items-center justify-center gap-2 text-sm cursor-pointer"
+              >
+                <span>View Resume</span>
+                <MdReadMore className="text-base" />
+              </motion.button>
+
+              <motion.button
+                onClick={() => {
                   const link = document.createElement('a')
                   link.href = '/resume.pdf'
                   link.setAttribute('download', 'Maruti_Nandan_Resume.pdf')
@@ -191,7 +203,7 @@ const Hero = () => {
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-3 border-2 border-primary text-primary rounded-lg font-semibold hover:bg-primary/10 transition flex items-center justify-center gap-2 text-sm cursor-pointer"
               >
-                <span>Resume</span>
+                <span>Download</span>
                 <MdDownload className="text-base" />
               </motion.button>
             </motion.div>

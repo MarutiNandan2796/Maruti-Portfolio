@@ -1,6 +1,5 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { FaHeart } from 'react-icons/fa'
 
 const Footer = () => {
   const currentYear = new Date().getFullYear()
@@ -164,7 +163,7 @@ const Footer = () => {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="flex flex-col md:flex-row justify-between items-center gap-6 text-gray-600 dark:text-gray-400 text-sm"
+          className="flex flex-col md:flex-row justify-center items-center gap-6 text-gray-600 dark:text-gray-400 text-sm"
         >
           {/* Left - Copyright */}
           <motion.p
@@ -188,29 +187,6 @@ const Footer = () => {
               {'>'}
             </motion.span>
           </motion.p>
-
-          {/* Center - Animated Divider for mobile */}
-          <motion.div
-            className="hidden md:block h-8 w-px bg-gradient-to-b from-transparent via-primary/30 to-transparent"
-            animate={{ opacity: [0.3, 1, 0.3] }}
-            transition={{ duration: 2, repeat: Infinity }}
-          />
-
-          {/* Right - Made with Love */}
-          <motion.div
-            className="flex items-center gap-2 group"
-            whileHover={{ scale: 1.05 }}
-            transition={{ type: 'spring', stiffness: 200 }}
-          >
-            <span className="group-hover:text-primary/80 transition-colors">Made with</span>
-            <motion.div
-              animate={{ scale: [1, 1.3, 1] }}
-              transition={{ duration: 0.6, repeat: Infinity, ease: 'easeInOut' }}
-            >
-              <FaHeart className="text-red-500 drop-shadow-lg" size={18} />
-            </motion.div>
-            <span className="group-hover:text-secondary/80 transition-colors">by You</span>
-          </motion.div>
         </motion.div>
 
         {/* Bottom Animated Border */}
