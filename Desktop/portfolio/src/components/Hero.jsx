@@ -139,7 +139,7 @@ const Hero = () => {
               variants={itemVariants}
               className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight tracking-tight text-primary"
             >
-              Web Developer.
+              Full Stack Developer.
             </motion.h2>
 
             {/* Description */}
